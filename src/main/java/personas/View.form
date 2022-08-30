@@ -162,7 +162,7 @@
             </constraints>
             <properties>
               <background color="-15515374"/>
-              <enabled value="false"/>
+              <enabled value="true"/>
               <text value="Guardar"/>
             </properties>
           </component>
