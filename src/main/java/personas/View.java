@@ -1,6 +1,8 @@
 package personas;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class View {
     private JPanel panel;
@@ -20,6 +22,20 @@ public class View {
     private JCheckBox cocina_fld;
     private JButton guardar_fld;
     private JButton cancelar_fld;
+
+    public View() {
+        guardar_fld.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(nombre_fld.getText());
+                if(masculino_fld.isSelected())
+                    System.out.println('M');
+                if(Femenino_fld.isSelected())
+                    System.out.println('F');
+                System.out.println(combo_fld.getSelectedItem());
+            }
+        });
+    }
 
     public JPanel getPanel() {
         return panel;
