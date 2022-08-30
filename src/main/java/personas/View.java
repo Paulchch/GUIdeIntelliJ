@@ -20,4 +20,11 @@ public class View {
     private JCheckBox cocina_fld;
     private JButton guardar_fld;
     private JButton cancelar_fld;
+
+    public JPanel getPanel() {
+        return panel;
+    }
+
+    //comment file->settings->GUI Designer->Java source code para ver el codigo que genera el View.form
+
 }
