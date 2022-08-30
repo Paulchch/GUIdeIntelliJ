@@ -18,5 +18,6 @@ public class Application {
 
         //MainView mainView  = new MainView();
         //ver como hacer para una sola selección en el radioButton
+        //Entonces el view form genera un archivo XML con las propiedades
     }
 }
