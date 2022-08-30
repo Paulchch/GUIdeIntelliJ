@@ -42,5 +42,6 @@ public class View {
     }
 
     //comment file->settings->GUI Designer->Java source code para ver el codigo que genera el View.form
+    //Listas es JTable
 
 }
