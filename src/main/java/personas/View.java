@@ -12,4 +12,12 @@ public class View {
     private JRadioButton masculino_fld;
     private JRadioButton Femenino_fld;
     private JLabel estado_lbl;
+    private JComboBox combo_fld;
+    private JLabel pasatiempos_lbl;
+    private JCheckBox musica_fld;
+    private JCheckBox cine_fld;
+    private JCheckBox videos_fld;
+    private JCheckBox cocina_fld;
+    private JButton guardar_fld;
+    private JButton cancelar_fld;
 }
