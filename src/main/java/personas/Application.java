@@ -11,7 +11,7 @@ public class Application {
         }
 
         View view = new View();//tocar sobre la clase y darle import
-        JFrame window = new JFrame();
+        JFrame window = new JFrame();//se le suele llamar frame
         window.setSize(500,300);
         window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         window.setTitle("Personas");

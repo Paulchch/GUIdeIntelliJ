@@ -1,6 +1,7 @@
 package personas;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,8 +12,11 @@ public class View {
     private JLabel nombre_lbl;
     private JTextField nombre_fld;
     private JLabel Sexo;
+
+    public ButtonGroup buttonGroup = new ButtonGroup();
     private JRadioButton masculino_fld;
     private JRadioButton Femenino_fld;
+
     private JLabel estado_lbl;
     private JComboBox combo_fld;
     private JLabel pasatiempos_lbl;
@@ -22,19 +26,35 @@ public class View {
     private JCheckBox cocina_fld;
     private JButton guardar_fld;
     private JButton cancelar_fld;
+    private JPanel radioPanel;
+
 
     public View() {
         guardar_fld.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println(nombre_fld.getText());
-                if(masculino_fld.isSelected())
+                if (masculino_fld.isSelected())
                     System.out.println('M');
-                if(Femenino_fld.isSelected())
+                if (Femenino_fld.isSelected())
                     System.out.println('F');
+
+                boolean nombreInvalido = false;
                 System.out.println(combo_fld.getSelectedItem());
+
+                char[] arr = nombre_fld.getText().toCharArray();
+                for (char i:arr) {
+                    if(Character.isDigit(i))
+                        nombreInvalido = true;
+                }
+                if(nombreInvalido){
+                    nombre_fld.setBackground(Color.red);
+                    //panel.add(nombre_fld);
+                }
             }
+
         });
+
     }
 
     public JPanel getPanel() {
