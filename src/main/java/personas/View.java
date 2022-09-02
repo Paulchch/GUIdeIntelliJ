@@ -40,6 +40,7 @@ public class View {
                     System.out.println('F');
 
                 boolean nombreInvalido = false;
+                boolean idInvalido = false;
                 System.out.println(combo_fld.getSelectedItem());
 
                 char[] arr = nombre_fld.getText().toCharArray();
@@ -51,6 +52,17 @@ public class View {
                     nombre_fld.setBackground(Color.red);
                     //panel.add(nombre_fld);
                 }
+                else
+                    nombre_fld.setBackground(Color.white);
+                arr = id_fld.getText().toCharArray();
+                for (char i:arr) {
+                    if(!Character.isDigit(i))
+                        idInvalido = true;
+                }
+                if(idInvalido)
+                    id_fld.setBackground(Color.red);
+                else
+                    id_fld.setBackground(Color.white);
             }
 
         });
