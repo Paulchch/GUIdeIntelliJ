@@ -6,7 +6,9 @@ public class Application {
     public static void main(String[] args) {
         try{
             UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
-        }catch(Exception ex){}
+        }catch(Exception ex){
+            System.out.println("Ex:" + ex);
+        }
 
         View view = new View();//tocar sobre la clase y darle import
         JFrame window = new JFrame();
